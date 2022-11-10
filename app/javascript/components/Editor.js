@@ -51,7 +51,25 @@ const Editor = () => {
       console.error(error);
     }
   };
+  const deleteEvent = async (eventId) => {
+    const sure = window.confirm('Are you sure?');
 
+    if (sure) {
+      try {
+        const response = await window.fetch(`/api/events/${eventId}`, {
+          method: 'DELETE',
+        });
+
+        if (!response.ok) throw Error(response.statusText);
+
+        window.alert('Event Deleted!');
+        navigate('/events');
+        setEvents(events.filter(event => event.id !== eventId));
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
   return (
     <>
       <Header />
@@ -62,11 +80,10 @@ const Editor = () => {
         ) : (
           <>
             <EventList events={events} />
-
             <Routes>
-          <Route path="new" element={<EventForm onSave={addEvent} />} />
-          <Route path=":id" element={<Event events={events} />} />
-        </Routes>
+              <Route path="new" element={<EventForm onSave={addEvent} />} />
+              <Route path=":id" element={<Event events={events} onDelete={deleteEvent} />} />
+            </Routes>
           </>
         )}
       </div>
