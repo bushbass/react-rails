@@ -17,6 +17,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6",
+    "react-toastify": "^9.1.1",
+    "sass": "^1.56.1",
     "shakapacker": "6.5.0",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "5",
@@ -27,21 +29,17 @@
     "webpack-merge": "5"
   },
   "version": "0.1.0",
-  "babel": {
-    "presets": [
-      "./node_modules/shakapacker/package/babel/preset.js",
-      "@babel/preset-react"
-    ]
-  },
   "browserslist": [
     "defaults"
   ],
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.9",
     "eslint": "^8.27.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "react-refresh": "^0.14.0"
   }
 }
