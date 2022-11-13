@@ -1,5 +1,13 @@
 # README
 
+# kick off the Rails server in one terminal 
+# and the webpack dev server in another:
+
+rails s
+./bin/webpacker-dev-server
+
+------------
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
