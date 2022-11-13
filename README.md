@@ -4,6 +4,7 @@
 # and the webpack dev server in another:
 
 rails s
+
 ./bin/webpacker-dev-server
 
 ------------
