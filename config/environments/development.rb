@@ -8,7 +8,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  config.hosts << "3000-bushbass-reactrails-bb4xxk4ourv.ws-us75.gitpod.io"
+  config.hosts << "3000-bushbass-reactrails-bb4xxk4ourv.ws-us74.gitpod.io"
 
 
   # Do not eager load code on boot.
